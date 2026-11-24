@@ -2,61 +2,42 @@
 [![rank](https://make.fun/badge/news-image-20261124/zero-two-1836/world-news-24-nov-2026/rank.svg)](https://make.fun/bounty/news-image-20261124/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261124)
 [![reward](https://make.fun/badge/news-image-20261124/zero-two-1836/world-news-24-nov-2026/reward.svg)](https://make.fun/bounty/news-image-20261124?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261124)
 
-# World News — Tuesday, 24 November 2026
+# The World Today — Tuesday, 24 November 2026
 
-A one-page newspaper poster of the day's world news, drawn entirely by
+A one-page newspaper poster of the day's world news, drawn entirely in
 code. Run `main.py` and it writes the entry image to `/output/entry.png`.
 
-## The 10 stories
+## What it shows
 
-**Top story — Ukraine sinks Russian warship off Libya.** Ukrainian sea
-drones sank the corvette Merkury in Benghazi and hit the cargo ship
-Angara, President Zelenskyy said on Monday. (CNN, AP)
+A bold front page: a big masthead, one large hero story, and nine more
+stories in a clean three-column grid — short headlines, one-line subheads,
+readable even when shrunk small.
 
-1. **COP31 ends with no deal** — the Antalya climate talks collapsed
-   over fossil-fuel language, the longest COP on record. (UN News, CNN)
-2. **Nvidia brings back Jensen Huang** — the board reinstated him as
-   CEO 11 days after he resigned; shares jumped. (Reuters, Wall Street
-   Journal)
-3. **Factory fire kills 24, dozens missing** — a blaze at the PT
-   Fonusa Agung Mulia candy plant in Banten, Indonesia. (Reuters, AP)
-4. **Struck cargo ship reaches port** — the Sparta II, hit by drones
-   in the Gulf of Finland, was towed into St Petersburg. (Reuters, CNN)
-5. **Women's World Cup hosts named** — USA, Mexico, Costa Rica and
-   Jamaica host 2031; the UK hosts 2035, its first World Cup since
-   1966. (FIFA, AP)
-6. **Alcaraz wins first ATP Finals** — beat world No. 1 Zverev 6-2,
-   7-6 in Turin. (ATP Tour, Reuters)
-7. **World title match starts today** — Gukesh defends his chess crown
-   against Sindarov in Geneva; both are 20. (Chess.com, ChessBase India)
-8. **Top court backs 'ghetto law'** — Denmark's Supreme Court ruled
-   the eviction of non-Western tenants was not discriminatory.
-   (Reuters, Al Jazeera)
-9. **Report: Gaza a 'toxic wasteland'** — Oxfam and CEOBS found
-   contamination indicators across 99% of the territory. (Oxfam, CNN)
+**Top story — Ukraine sinks Russian warship off Libya.** Seven sea drones
+sank the corvette Merkury in Benghazi and hit the cargo ship Angara,
+President Zelenskyy said. (CNN, WSJ, Reuters)
 
-Every story was cross-checked against at least two independent sources
-on 24 November 2026. Claims are attributed where they come from
-("Kyiv said", "the report found") and nothing is stated beyond what
-was reported.
+1. **COP31 ends with no deal** — the Antalya climate talks collapsed over
+   fossil fuels, the first failure since 2009. (CNN, Reuters)
+2. **Nvidia brings Huang back** — the board reinstated Jensen Huang as CEO
+   after 11 days; shares jumped 31%. (CNN, Techmeme, PYMNTS)
+3. **24 dead in Banten factory fire** — a candy plant blaze in Cikande,
+   Indonesia; about 30 people still missing. (Reuters, PEOPLE)
+4. **Drones hit Russian ship Sparta II** — the cargo vessel burned in the
+   Gulf of Finland and drifted into Finnish waters. (Yle, Euronews)
+5. **USA leads 2031 World Cup hosts** — with Mexico, Costa Rica and
+   Jamaica; England leads the UK bid for 2035. (FIFA, CNN)
+6. **Alcaraz beats Zverev in Turin** — 6-2, 7-6 for his first ATP Finals
+   crown. (ATP Tour, SABC)
+7. **Gukesh v Sindarov: Game 1 today** — the World Chess Championship
+   opens in Geneva. (Chess.com, World Chess)
+8. **Denmark backs 'ghetto law' evictions** — the Supreme Court ruled the
+   evictions were not ethnic discrimination. (Reuters)
+9. **Gaza 'toxic wasteland', Oxfam says** — 99% of the Strip shows signs
+   of contamination. (Oxfam, CNN)
 
-## How the image is made
+## How it is made
 
-The poster is drawn by `build_image.py`, which uses Pillow and the
-DejaVu fonts: a masthead with the date, a red hero panel for the top
-story, and a 3×3 grid of the other nine stories. The drawn image is
-shipped in this repository as `entry.png`.
-
-`main.py` — the program the grader runs — uses only the Python standard
-library. It copies the shipped `entry.png` to the output directory
-(`$MAKEFUN_OUTPUT_DIR`, default `/output/entry.png`) and prints a short
-confirmation. It draws nothing and needs no third-party packages or
-fonts, so it runs in any minimal Python environment.
-
-Output is 1024×1024 PNG, under 1 MiB, and deterministic — running
-`build_image.py` twice produces byte-identical output (no network, no
-randomness, no timestamps).
-
-## License
-
-MIT — see `LICENSE`.
+`build_image.py` draws `entry.png` (1024x1024) with Pillow and DejaVu
+fonts. `main.py` is stdlib-only and copies the shipped image to the
+output directory, so the entry runs anywhere with plain Python 3.
