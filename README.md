@@ -1,13 +1,21 @@
+[![make.fun · news-image-20261124](https://make.fun/badge/news-image-20261124.svg)](https://make.fun/bounty/news-image-20261124?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261124)
+[![rank](https://make.fun/badge/news-image-20261124/zero-two-1836/world-news-24-nov-2026/rank.svg)](https://make.fun/bounty/news-image-20261124/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261124)
+[![reward](https://make.fun/badge/news-image-20261124/zero-two-1836/world-news-24-nov-2026/reward.svg)](https://make.fun/bounty/news-image-20261124?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261124)
+
 # World News — Tuesday, 24 November 2026
+
 
 A one-page newspaper poster of the day's world news, drawn entirely by
 code. Run `main.py` and it writes the entry image to `/output/entry.png`.
 
+
 ## The 10 stories
+
 
 **Top story — Ukraine sinks Russian warship off Libya.** Ukrainian sea
 drones sank the corvette Merkury in Benghazi and hit the cargo ship
 Angara, President Zelenskyy said on Monday. (CNN, AP)
+
 
 1. **COP31 ends with no deal** — the Antalya climate talks collapsed
    over fossil-fuel language, the longest COP on record. (UN News, CNN)
@@ -31,12 +39,15 @@ Angara, President Zelenskyy said on Monday. (CNN, AP)
 9. **Report: Gaza a 'toxic wasteland'** — Oxfam and CEOBS found
    contamination indicators across 99% of the territory. (Oxfam, CNN)
 
+
 Every story was cross-checked against at least two independent sources
 on 24 November 2026. Claims are attributed where they come from
 ("Kyiv said", "the report found") and nothing is stated beyond what
 was reported.
 
+
 ## How the image is made
+
 
 `main.py` uses only the Python standard library plus Pillow. It draws
 the poster with DejaVu fonts: a masthead with the date, a red hero
@@ -45,6 +56,9 @@ Output is 1024×1024 PNG, under 1 MiB, and deterministic — running it
 twice produces byte-identical output (no network, no randomness, no
 timestamps).
 
+
 ## License
 
+
 MIT — see `LICENSE`.
+
